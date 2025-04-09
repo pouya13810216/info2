@@ -1,0 +1,714 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="keywords" content="پویا, دلنواز, پویا دلنواز, Pouya, Delnavaz, Pouya Delnavaz, برنامه‌نویس, توسعه‌دهنده وب, رزومه, نمونه کار, Django, Python, پایتون, سایت شخصی, portfolio">
+        <meta name="description" content="سایت رسمی پویا دلنواز | برنامه‌نویس و توسعه‌دهنده وب با جنگو. مشاهده نمونه‌کار، رزومه، مهارت‌ها و راه‌های ارتباطی.">
+        <meta name="author" content="Pouya Delnavaz">
+        
+        <title>پویا دلنواز | برنامه‌نویس و توسعه‌دهنده وب با Django</title>
+        
+        <!-- favicon -->
+        <link href="images/favicon.ico" rel="icon" type="image/png">
+
+        <!--Font Awesome css-->
+        <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!--Bootstrap css-->
+        <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+
+        <!--Owl Carousel css-->
+        <link rel="stylesheet" href="{% static "css/owl.carousel.min.css" %}">
+        <link rel="stylesheet" href="{% static "css/owl.theme.default.min.css" %}">
+
+        <!--Magnific Popup css-->
+        <link rel="stylesheet" href="{% static "css/magnific-popup.css" %}">
+
+        <!--Site Main Style css-->
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+    </head>
+
+    <body>
+
+        <!--Preloader-->
+        <div class="preloader">
+            <div class="loader "></div>
+        </div>
+        <!--Preloader-->
+
+        <!--Navbar Start-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- LOGO -->
+                <a class="navbar-brand logo" href="index.html">
+                    پویادلنواز
+                </a>
+
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <!--Nav Links-->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" data-scroll-nav="0" >خانه</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-scroll-nav="1" >درباره من</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-scroll-nav="2" >سرویس ها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-scroll-nav="3">نمونه کارها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-scroll-nav="4">وبلاگ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-scroll-nav="5">تماس با من</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Navbar End-->
+
+        <!--Home Section Start-->
+        <section id="home" class="banner banner-centered" style="background-image: url('{% static "assets/background/creative2-banner-bg.jpg" %}')" data-stellar-background-ratio=".7" data-scroll-index="0">
+                <!--Banner Content-->
+                <div class="banner-caption">
+                    <h1>سلام من پویا دلنواز هستم</h1>
+                    <p class="cd-headline clip mt-30">
+                        <span>برنامه نویس و دانشجو نرم افزار</span><br>
+                        <span class="blc">برنامه نویس</span>
+                        <span class="cd-words-wrapper">
+                            <b class="is-visible">پایتون</b>
+                            <b>جنگو</b>
+                            <b>وردپرس</b>
+                        </span>
+                    </p>
+                </div>
+                <div class="arrow bounce">
+                    <a class="fa fa-chevron-down fa-2x" href="#" data-scroll-nav="1"></a>
+                </div>
+
+                <svg id="home-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1400 300" preserveAspectRatio="none">
+                    <path class="p-curve" d="M-0.2,0.5c0,0-21.7,99.6,233.1,99.6s320.1,199.7,467.6,200.1S898.6,100,1167.6,100S1401,0,1401,0v301H0 L-0.2,0.5z"/>
+                </svg>
+        </section>
+        <!--Home Section End-->
+
+        <!--About Section Start-->
+        <section class="about pt-100 pb-100" data-scroll-index="1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6">
+                        <!--About Image-->
+                        <div class="about-img">
+                            {% for image in about  %}
+                            
+                            <img src="{{ image.img_about.url }}" alt="">
+
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <!--About Content-->
+                        <div class="about-content">
+                            <div class="about-heading">
+                                <h2>درباره من</h2>
+                                <span>مرجع قالب و اسکریپت های فارسی</span>
+                            </div>
+                                {% for item in about  %}
+                                <p>{{item.about}}</p>
+
+                                {% endfor %}
+                            <div class="social-icons" id ="white">
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                            </div>
+                            <span class="about-button">
+                                <a class="main-btn" href="#">دانلود رزومه</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--About Section End-->
+
+        <!--Services Section Start-->
+        <section class="services bg-gray pt-100 pb-50" data-scroll-index="2">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="heading text-center">
+                            <h6>سرویس ها</h6>
+                            <h2>کاری که من می توانم انجام دهم</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!--Service Item-->
+                        <div class="service-item">
+                            <span class="icon">
+                                <i class="bi bi-filetype-py"></i>
+                            </span>
+                            <h4>برنامه نویس پایتون</h4>
+                            <p> برنامه‌نویس پایتون با علاقه‌مندی به ساخت ابزارهای کاربردی، وب‌اپلیکیشن و اتوماسیون کارها.
+                                تجربه کار با فریم‌ورک‌هایی مثل Django و کار با دیتابیس و APIها رو دارم و همیشه دنبال یادگیری بیشترم.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!--Service Item-->
+                        <div class="service-item">
+                            <span class="icon">
+                                <i class="bi bi-cast"></i>
+                            </span>
+                            <h4>برنامه نویس جنگو</h4>
+                            <p>توسعه‌دهنده‌ی وب با Django و علاقه‌مند به ساخت وب‌سایت‌های داینامیک و مقیاس‌پذیر با پایتون.
+                                تجربه‌ی کار با دیتابیس، پنل ادمین، REST API و طراحی رابط‌های کاربری با HTML/CSS و قالب‌های جنگو رو دارم.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!--Service Item-->
+                        <div class="service-item">
+                            <span class="icon">
+                                <i class="bi bi-hdd-network"></i>
+                            </span>
+                            <h4>کارشناس شبکه</h4>
+                            <p>کارشناس شبکه با تجربه در راه‌اندازی، پیکربندی و نگهداری زیرساخت‌های شبکه‌های کامپیوتری.
+                                به امنیت شبکه، مدیریت سرورها، و بهینه‌سازی عملکرد شبکه در محیط‌های واقعی تسلط دارم و همیشه دنبال یادگیری تکنولوژی‌های جدید هستم.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!--Service Item-->
+                        <div class="service-item">
+                            <span class="icon">
+                                <i class="bi bi-hdd-stack"></i>
+                            </span>
+                            <h4>(Server Managrr) مدیر شبکه</h4>
+                            <p>مدیر شبکه با تجربه در طراحی، پیاده‌سازی و مدیریت زیرساخت‌های شبکه‌ای پایدار و امن در سازمان‌ها.
+                                تسلط کامل به مانیتورینگ، امنیت شبکه، مدیریت تجهیزات و بهینه‌سازی عملکرد سیستم‌ها دارم.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!--Service Item-->
+                        <div class="service-item">
+                            <span class="icon">
+                                <i class="bi bi-lock"></i>
+                            </span>
+                            <h4>(Network security) امنیت شبکه</h4>
+                            <p> متخصص امنیت شبکه با تجربه در شناسایی آسیب‌پذیری‌ها، پیاده‌سازی راهکارهای حفاظتی و مقابله با تهدیدات سایبری.
+                                به اصول امنیت لایه‌ای، فایروال‌ها، تست نفوذ و مانیتورینگ شبکه مسلط هستم و همیشه به‌روز با تهدیدات جدید حرکت می‌کنم.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!--Service Item-->
+                        <div class="service-item">
+                            <span class="icon">
+                                <i class="fa fa-support"></i>
+                            </span>
+                            <h4>(Hellp Desk) پشتیبانی</h4>
+                            <p>کارشناس هلپ دسک با تجربه در پشتیبانی فنی کاربران، رفع مشکلات نرم‌افزاری و سخت‌افزاری، و مدیریت تیکت‌ها.
+                                با تسلط به مفاهیم شبکه، سیستم‌عامل‌ها و ابزارهای پشتیبانی، تلاش می‌کنم بهترین تجربه‌ی کاربری رو فراهم کنم.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Services Section End-->
+
+        <!--Stats Section Start-->
+        <section class="stats pt-100 pb-100" style="background-image: url('{% static "assets/background/stats-bg.jpg" %}')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <!--Stats Item-->
+                        <div class="single-stat">
+                            <span class="stat-icon">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                            </span>
+                            <h2 class="counter" data-count="180">10</h2>
+                            <p>مشتریان خوشحال</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <!--Stats Item-->
+                        <div class="single-stat">
+                            <span class="stat-icon">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </span>
+                            <h2 class="counter" data-count="10">40</h2>
+                            <p>پروژه های تکمیل شده</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <!--Stats Item-->
+                        <div class="single-stat">
+                            <span class="stat-icon">
+                                <i class="fa fa-edit" aria-hidden="true"></i>
+                            </span>
+                            <h2 class="counter" data-count="1100">10</h2>
+                            <p>خطوط کد</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <!--Stats Item-->
+                        <div class="single-stat">
+                            <span class="stat-icon">
+                                <i class="fa fa-trophy" aria-hidden="true"></i>
+                            </span>
+                            <h2 class="counter" data-count="1">15</h2>
+                            <p>پروژه های برنده شده</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Stats Section End-->
+
+
+        <!--Portfolio Section Start-->
+        <section class="portfolio pt-100 pb-70" data-scroll-index="3">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="heading text-center">
+                            <h6>نمونه کارها </h6>
+                            <h6>و</h6>
+                            <h2>کاری که انجام دادم</h2>
+                        </div>
+                        <div class="portfolio-filter text-center">
+                            <ul>
+                                <li class="sel-item" data-filter="*">همه</li>
+                                <li data-filter=".application">سوابق کاری</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- اینجا ردیف یک‌بار فقط تعریف میشه -->
+                <div class="row portfolio-items">
+                    {% for items in historys %}
+                    <!-- Portfolio Item -->
+                    <div class="col-lg-4 col-md-6 item application">
+                        <div class="item-content">
+                            <img src="{{ items.history_img.url }}" alt="">
+                            <div class="item-overlay">
+                                <h6>{{ items.history_title }}</h6>
+                                <div class="icons">
+                                    <span class="icon link">
+                                        <a href="{{ items.history_img.url }}">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div> <!-- پایان ردیف -->
+            </div>
+        </section>
+                               
+                    {% comment %} <!--Portfolio Item-->
+                    <div class="col-lg-4 col-md-6 item design">
+                        <div class="item-content">
+                            <img src="images/portfolio/img-2.jpg" alt="">
+                            <div class="item-overlay">
+                                <h6>طراحی وب</h6>
+                                <div class="icons">
+                                    <span class="icon link">
+                                        <a href="images/portfolio/img-2.jpg">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Portfolio Item-->
+                    <div class="col-lg-4 col-md-6 item development">
+                        <div class="item-content">
+                            <img src="images/portfolio/img-3.jpg" alt="">
+                            <div class="item-overlay">
+                                <h6>اپلیکیشن</h6>
+                                <div class="icons">
+                                    <span class="icon link">
+                                        <a href="images/portfolio/img-3.jpg">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Portfolio Item-->
+                    <div class="col-lg-4 col-md-6 item design development">
+                        <div class="item-content">
+                            <img src="images/portfolio/img-4.jpg" alt="">
+                            <div class="item-overlay">
+                                <h6>توسعه</h6>
+                                <div class="icons">
+                                    <span class="icon link">
+                                        <a href="images/portfolio/img-4.jpg">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Portfolio Item-->
+                    <div class="col-lg-4 col-md-6 item development application">
+                        <div class="item-content">
+                            <img src="images/portfolio/img-5.jpg" alt="">
+                            <div class="item-overlay">
+                                <h6>طراحی وب</h6>
+                                <div class="icons">
+                                    <span class="icon link">
+                                        <a href="images/portfolio/img-5.jpg">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Portfolio Item-->
+                    <div class="col-lg-4 col-md-6 item application development">
+                        <div class="item-content">
+                            <img src="images/portfolio/img-6.jpg" alt="">
+                            <div class="item-overlay">
+                                <h6>طراحی وب</h6>
+                                <div class="icons">
+                                    <span class="icon link">
+                                        <a href="images/portfolio/img-6.jpg">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Portfolio Section End--> {% endcomment %}
+
+        <!--Blog Section Start-->
+        <section class="blogs pt-100 pb-100 bg-gray" data-scroll-index="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="heading text-center">
+                            <h6>وبلاگ</h6>
+                            <h2>آخرین خبرها</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="owl-carousel owl-theme">
+                        {% for article in articles %}
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="{{ article.get_absolute_url }}">
+                                    <img src="{{ article.img.url }}" alt="{{ article.title }}">
+                                </a>
+                            </div>
+                
+                            <div class="blog-content">
+                                <h3>{{ article.title }}</h3>
+                                <p>{{ article.body|truncatewords:30 | safe }}</p>
+                                <div class="blog-meta">
+                                    <span class="more">
+                                        <a href="{% url "singleblog" article.slug %}">مطالعه بیشتر</a>
+                                    </span>
+                                    <span class="date">
+                                        {{ article.date|date:"j F Y" }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                                        {% comment %} <!--Blogs Item-->
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="single-blog.html">
+                                    <img src="images/blog/img-2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-content">
+                                <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
+                                <div class="blog-meta">
+                                    <span class="more">
+                                        <a href="single-blog.html">مطالعه بیشتر</a>
+                                    </span>
+                                    <span class="date">
+                                        22 مرداد 1400
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Blogs Item-->
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="single-blog.html">
+                                    <img src="images/blog/img-3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-content">
+                                <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
+                                <div class="blog-meta">
+                                    <span class="more">
+                                        <a href="single-blog.html">مطالعه بیشتر</a>
+                                    </span>
+                                    <span class="date">
+                                        22 مرداد 1400
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Blogs Item-->
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <a href="single-blog.html">
+                                    <img src="images/blog/img-4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-content">
+                                <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
+                                <div class="blog-meta">
+                                    <span class="more">
+                                        <a href="single-blog.html">مطالعه بیشتر</a>
+                                    </span>
+                                    <span class="date">
+                                        22 مرداد 1400
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> {% endcomment %}
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="blog-button pt-40">
+                            <a class="main-btn" href="{% url "articels"  %}">مشاهده بیشتر</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Blog Section End-->
+
+        <!--Testimonials Section Start-->
+        <section class="testimonials pt-100 pb-100" style="background-image: url({% static 'assets/background/testimonials-bg.jpg' %});">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="owl-carousel owl-theme text-center">
+                            <!-- Testimonials Item -->
+                            <div class="testimonial-item">
+                                <div class="author-img">
+                                    <img src="{% static 'assets/testimonial/dr1.jpg' %}" alt="">
+                                </div>
+                                <h5>دکتر ایراهیم احمدی</h5>
+                                <span>رئیس سابق دانشگاه ملی مهارت شماره یک تبریز</span>
+                                <p>پویا یکی از دانشجویان پرتلاش و مبتکر ما بود که همیشه با انگیزه و اشتیاق در کلاس‌ها و پروژه‌ها حضور داشت. ایشان نه تنها در تحصیل، بلکه در فعالیت‌های علمی و پژوهشی نیز برجسته بود. توانمندی‌های فنی و مدیریتی‌اش در پروژه‌های مختلف نشان از تعهد و تخصص بالای او داشت. اخلاق حرفه‌ای و همدلی‌اش با سایر همکلاسی‌ها همیشه قابل تحسین بود. بدون شک، پویا آینده درخشانی در پیش دارد.</p>
+                            </div>
+                            <!-- Testimonials Item -->
+                            <div class="testimonial-item">
+                                <div class="author-img">
+                                    <img src="{% static 'assets/testimonial/dr2.jpg' %}" alt="">
+                                </div>
+                                <h5>دکتر احد بهشتی اصل</h5>
+                                <span>رئیس دانشگاه ملی مهارت شماره یک تبریز</span>
+                                <p>پویا یکی از دانشجویان برجسته و آینده‌دار ما بود که در دوران تحصیل خود نشان داد که فردی پر انگیزه، پرتلاش و مسئولیت‌پذیر است. او همواره با علاقه‌مندی و اشتیاق در پروژه‌های علمی و پژوهشی مشارکت داشت و توانست در بسیاری از زمینه‌ها توانایی‌های خود را به نمایش بگذارد. قدرت تحلیل، نوآوری و کار تیمی‌اش در مقاطع مختلف تحصیلی مثال‌زدنی بود. من معتقدم که پویا با این پشتکار و تعهدی که دارد، در هر عرصه‌ای موفق خواهد بود.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        <!--Testimonials Section End-->
+
+        <!--Contact Section Start-->
+        <section class="contact pt-100 pb-100" data-scroll-index="5">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="heading">
+                            <h6>تماس</h6>
+                            <h2>در تماس باشید</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+<!--Contact Form-->
+<div id="contact-alert" class="alert d-none" role="alert"></div>
+
+<form id="contact-form" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="form-name" value="contactForm" />
+    <div class="row">
+        <div class="col-md-6 form-group">
+            {{ form.name }}
+        </div>
+        <div class="col-md-6 form-group">
+            {{ form.email }}
+        </div>
+        <div class="col-md-12 form-group">
+            {{ form.message }}
+        </div>
+        <div class="col-md-12 text-center">
+            <button id="contact-submit" class="mt-30 main-btn" type="submit">ارسال پیام</button>
+        </div>
+    </div>
+</form>
+<br>
+</div>
+</div>
+</div>
+
+        <!--Footer Start-->
+        <footer class="pt-50 pb-50">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3 col-sm-6">
+                        <!--Contant Item-->
+                        <div class="contact-info">
+                            <h5>پویادلنواز<h5>
+                            <p>برنامه‌نویس و توسعه‌دهنده وب با Django و Python</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <!--Contant Item-->
+                        <div class="contact-info">
+                            <h5>ایمیل</h5>
+                            <p>pouya.delnavaz@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <!--Contant Item-->
+                        <div class="contact-info">
+                            <h5>آدرس</h5>
+                            <p>تبریز ، رسالت ، اشکان</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <hr>
+                        <p class="copy pt-30">
+                             <a style="color: dodgerblue;">ساخته شده با ❤️ پویادلنواز</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Footer End-->
+
+        <!--Jquery js-->
+        <script src="{% static "js/jquery.min.js" %}"></script>
+        <!--Bootstrap js-->
+        <script src="{% static "js/bootstrap.min.js" %}"></script>
+        <!--Stellar js-->
+        <script src="{% static "js/jquery.stellar.js" %}"></script>
+        <!--Animated Headline js-->
+        <script src="{% static "js/animated.headline.js" %}"></script>
+        <!--Owl Carousel js-->
+        <script src="{% static "js/owl.carousel.min.js" %}"></script>
+        <!--ScrollIt js-->
+        <script src="{% static "js/scrollIt.min.js" %}"></script>
+        <!--Isotope js-->
+        <script src="{% static "js/isotope.pkgd.min.js" %}"></script>
+        <!--Magnific Popup js-->
+        <script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+        <!--Site Main js-->
+        <script src="{% static "js/main.js" %}"></script>
+        <script>
+            $("#contact-form").on("submit", function (e) {
+                e.preventDefault();
+        
+                let csrftoken = $('[name=csrfmiddlewaretoken]').val();
+                let name = $("#contact-name").val();
+                let email = $("#contact-email").val();
+                let message = $("#contact-message").val();
+        
+                let hasError = false;
+                $(".con-validate").each(function () {
+                    if ($(this).val().trim() === "") {
+                        $(this).addClass("con-error");
+                        hasError = true;
+                    } else {
+                        $(this).removeClass("con-error");
+                    }
+                });
+        
+                if (!hasError) {
+                    $.ajax({
+                        type: "POST",
+                        url: window.location.href,
+                        data: {
+                            con_name: name,
+                            con_email: email,
+                            con_message: message,
+                            csrfmiddlewaretoken: csrftoken
+                        },
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        },
+                        success: function (response) {
+                            if (response.status === "success") {
+                                showAlert("✅ پیام شما با موفقیت ارسال شد.", "success");
+                                $("#contact-form input, #contact-form textarea").val("");
+                            }
+                        },
+                        error: function () {
+                            showAlert("❌ خطایی در ارسال پیام رخ داد. لطفاً دوباره امتحان کنید.", "danger");
+                        }
+                    });
+                } else {
+                    showAlert("⚠️ لطفاً تمام فیلدها را به درستی پر کنید.", "warning");
+                }
+            });
+        
+            $(".con-validate").keyup(function () {
+                $(this).removeClass("con-error");
+            });
+        
+            function showAlert(message, type) {
+                const alertBox = $("#contact-alert");
+                alertBox
+                    .removeClass("d-none alert-success alert-danger alert-warning")
+                    .addClass(`alert alert-${type}`)
+                    .hide()
+                    .html(message)
+                    .fadeIn(500);
+        
+                setTimeout(() => {
+                    alertBox.fadeOut(500, () => {
+                        alertBox.addClass("d-none");
+                    });
+                }, 4000);
+            }
+        </script>
+            </body>
+</html>
+
