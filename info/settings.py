@@ -106,10 +106,15 @@ WSGI_APPLICATION = 'info.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'info',
+        'USER': 'root',
+        'PASSWORD': 'YQvQIO7pMaRzuTe1fSHOMxBc',
+        'HOST': 'info',  # یا آی‌پی دقیق هاست دیتابیس
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
