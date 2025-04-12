@@ -1,6 +1,7 @@
 asgiref==3.8.1
 dj-database-url==2.3.0
 Django==5.1.7
+django-admin-persian-fonts==0.2
 django-ckeditor==6.7.2
 django-ckeditor-5==0.2.17
 django-js-asset==3.1.2
@@ -11,6 +12,7 @@ jdatetime==5.2.0
 pillow==11.1.0
 psycopg2==2.9.10
 python-dotenv==1.1.0
+six==1.17.0
 sqlparse==0.5.3
 typing_extensions==4.13.1
 tzdata==2025.2
