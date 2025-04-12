@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from django.shortcuts import render , redirect , get_object_or_404
+from django.shortcuts import render , redirect , get_object_or_404 , HttpResponse
 from .models import Live_index , history , Articel , Contact , Comment
 from django.contrib import messages
 from .form import ContactForm , CommentForm
@@ -47,3 +47,5 @@ def singleblog(request, slug):
         'comments': comments,
         'form': form
     })
+def custom_404_view(request, exception):
+    return render(request, '404.html', status=404)

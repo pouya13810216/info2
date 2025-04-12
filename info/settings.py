@@ -39,10 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps' ,
+    'django.contrib.sites', 
     'hom',
     'tinymce',
     'meta', 
 ]
+SITE_ID=1
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 500,
@@ -106,15 +109,11 @@ WSGI_APPLICATION = 'info.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'info',
-        'USER': 'root',
-        'PASSWORD': 'YQvQIO7pMaRzuTe1fSHOMxBc',
-        'HOST': 'info',  # یا آی‌پی دقیق هاست دیتابیس
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+handler404 = 'hom.views.custom_404_view'
 
 
 # Password validation

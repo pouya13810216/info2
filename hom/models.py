@@ -3,6 +3,7 @@ from django.utils.text import slugify
 from tinymce.models import HTMLField
 from django.utils import timezone
 import jdatetime
+from django.urls import reverse
 
 class Comment(models.Model):
     name = models.CharField(max_length=100)
@@ -28,8 +29,7 @@ class Articel(models.Model):
     date = models.DateTimeField(default=timezone.now)
     slug = models.SlugField(allow_unicode=True, blank=True)
     img = models.ImageField(upload_to='uploads/aricels', blank=True)
-    puplic=models.CharField(default="پویا دلنواز" , max_length=100)
-
+    puplic = models.CharField(default="پویا دلنواز", max_length=100)
 
     @property
     def date_j(self):
@@ -38,11 +38,14 @@ class Articel(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             raw_slug = slugify(self.title)
-            self.slug = raw_slug.replace('-', '')  # یا مثلاً با '_' عوض کن
+            self.slug = raw_slug.replace('-', '')
         super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse("singleblog", kwargs={"slug": self.slug})
     
     
 class history(models.Model):

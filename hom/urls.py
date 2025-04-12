@@ -2,6 +2,7 @@ from django.urls import path , include
 from . import views
 from info import settings
 from django.conf.urls.static import static
+
 urlpatterns = [
     path('' , views.index , name = "index"), 
     path('articels/' , views.articles , name="articels"), 
