@@ -23,6 +23,8 @@ class Live_index(models.Model):
     about=models.TextField( blank=False , null=False)
     img_about = models.ImageField(upload_to='uploads/', null=False, blank=False )
     res_link=models.URLField(blank=False , null=True)
+    instageram_link =models.URLField(blank=False , null=True)
+    telgeram_link =models.URLField(blank=False , null=True)
 
 
     def __str__(self):
