@@ -13,7 +13,7 @@
         <title>پویا دلنواز | برنامه‌نویس و توسعه‌دهنده وب با Django</title>
         
         <!-- favicon -->
-        <link href="images/favicon.ico" rel="icon" type="image/png">
+        <link href="{% static "assets\about-img.jpg" %}" rel="icon" type="image/png">
 
         <!--Font Awesome css-->
         <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
@@ -137,7 +137,8 @@
                                 <a href="#"><i class="fa-brands fa-telegram"></i></a>
                             </div>
                             <span class="about-button">
-                                <a class="main-btn" href="#">دانلود رزومه</a>
+                                <a class="main-btn" href="{{ about.0.res_link }}">دانلود رزومه</a>
+
                             </span>
                         </div>
                     </div>
@@ -323,88 +324,6 @@
         </section>
                                
                     {% comment %} <!--Portfolio Item-->
-                    <div class="col-lg-4 col-md-6 item design">
-                        <div class="item-content">
-                            <img src="images/portfolio/img-2.jpg" alt="">
-                            <div class="item-overlay">
-                                <h6>طراحی وب</h6>
-                                <div class="icons">
-                                    <span class="icon link">
-                                        <a href="images/portfolio/img-2.jpg">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Portfolio Item-->
-                    <div class="col-lg-4 col-md-6 item development">
-                        <div class="item-content">
-                            <img src="images/portfolio/img-3.jpg" alt="">
-                            <div class="item-overlay">
-                                <h6>اپلیکیشن</h6>
-                                <div class="icons">
-                                    <span class="icon link">
-                                        <a href="images/portfolio/img-3.jpg">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Portfolio Item-->
-                    <div class="col-lg-4 col-md-6 item design development">
-                        <div class="item-content">
-                            <img src="images/portfolio/img-4.jpg" alt="">
-                            <div class="item-overlay">
-                                <h6>توسعه</h6>
-                                <div class="icons">
-                                    <span class="icon link">
-                                        <a href="images/portfolio/img-4.jpg">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Portfolio Item-->
-                    <div class="col-lg-4 col-md-6 item development application">
-                        <div class="item-content">
-                            <img src="images/portfolio/img-5.jpg" alt="">
-                            <div class="item-overlay">
-                                <h6>طراحی وب</h6>
-                                <div class="icons">
-                                    <span class="icon link">
-                                        <a href="images/portfolio/img-5.jpg">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Portfolio Item-->
-                    <div class="col-lg-4 col-md-6 item application development">
-                        <div class="item-content">
-                            <img src="images/portfolio/img-6.jpg" alt="">
-                            <div class="item-overlay">
-                                <h6>طراحی وب</h6>
-                                <div class="icons">
-                                    <span class="icon link">
-                                        <a href="images/portfolio/img-6.jpg">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!--Portfolio Section End--> {% endcomment %}
 
         <!--Blog Section Start-->
@@ -444,68 +363,6 @@
                         {% endfor %}
                     </div>
                 </div>
-                                        {% comment %} <!--Blogs Item-->
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <a href="single-blog.html">
-                                    <img src="images/blog/img-2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-content">
-                                <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                                <div class="blog-meta">
-                                    <span class="more">
-                                        <a href="single-blog.html">مطالعه بیشتر</a>
-                                    </span>
-                                    <span class="date">
-                                        22 مرداد 1400
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Blogs Item-->
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <a href="single-blog.html">
-                                    <img src="images/blog/img-3.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-content">
-                                <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                                <div class="blog-meta">
-                                    <span class="more">
-                                        <a href="single-blog.html">مطالعه بیشتر</a>
-                                    </span>
-                                    <span class="date">
-                                        22 مرداد 1400
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Blogs Item-->
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <a href="single-blog.html">
-                                    <img src="images/blog/img-4.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-content">
-                                <h3>لورم ایپسوم متن ساختگی با تولید سادگی </h3>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>
-                                <div class="blog-meta">
-                                    <span class="more">
-                                        <a href="single-blog.html">مطالعه بیشتر</a>
-                                    </span>
-                                    <span class="date">
-                                        22 مرداد 1400
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> {% endcomment %}
                 <div class="row">
                     <div class="col text-center">
                         <div class="blog-button pt-40">
@@ -582,47 +439,47 @@
     </div>
 </form>
 <br>
+<br>
+<br>
+<br>
 </div>
 </div>
 </div>
-
-        <!--Footer Start-->
-        <footer class="pt-50 pb-50">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-3 col-sm-6">
-                        <!--Contant Item-->
-                        <div class="contact-info">
-                            <h5>پویادلنواز<h5>
-                            <p>برنامه‌نویس و توسعه‌دهنده وب با Django و Python</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <!--Contant Item-->
-                        <div class="contact-info">
-                            <h5>ایمیل</h5>
-                            <p>pouya.delnavaz@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <!--Contant Item-->
-                        <div class="contact-info">
-                            <h5>آدرس</h5>
-                            <p>تبریز ، رسالت ، اشکان</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-12">
-                        <hr>
-                        <p class="copy pt-30">
-                             <a style="color: dodgerblue;">ساخته شده با ❤️ پویادلنواز</a>
-                        </p>
-                    </div>
+<footer class="pt-50 pb-50">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6">
+                <!--Contant Item-->
+                <div class="contact-info">
+                    <h5>پویادلنواز<h5>
+                    <p>برنامه‌نویس و توسعه‌دهنده وب با Django و Python</p>
                 </div>
             </div>
-        </footer>
-        <!--Footer End-->
+            <div class="col-md-3 col-sm-6">
+                <!--Contant Item-->
+                <div class="contact-info">
+                    <h5>ایمیل</h5>
+                    <p>pouya.delnavaz@gmail.com</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <!--Contant Item-->
+                <div class="contact-info">
+                    <h5>آدرس</h5>
+                    <p>تبریز ، رسالت ، اشکان</p>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-12">
+                <hr>
+                <p class="copy pt-30">
+                     <a style="color: dodgerblue;">ساخته شده با ❤️ پویادلنواز</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
         <!--Jquery js-->
         <script src="{% static "js/jquery.min.js" %}"></script>

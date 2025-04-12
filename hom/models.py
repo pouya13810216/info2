@@ -15,9 +15,14 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.article.title}"
+    
+
+
+
 class Live_index(models.Model):
     about=models.TextField( blank=False , null=False)
     img_about = models.ImageField(upload_to='uploads/', null=False, blank=False )
+    res_link=models.URLField(blank=False , null=True)
 
 
     def __str__(self):
